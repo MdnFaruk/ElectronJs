@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+  }
+  #dot{
+    text-align: right;
+    -webkit-app-region: drag;
+  }
+  button{
+    font-size: 2.7em;
+    color: #437e5f;
+    cursor: pointer;
+    border: none;
+    background-color: #c0c0c0;
+    outline: none;
+    -webkit-app-region: no-drag;
+  }
+  .container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  #battery {
+    box-sizing: content-box;
+    height: 7.8em;
+    width: 17.5em;
+    border: 0.6em solid #4edc90;
+    margin: auto;
+    border-radius: 0.6em;
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+  #battery:before {
+    position: absolute;
+    content: "";
+    height: 5em;
+    width: 1.1em;
+    background-color: #37423d;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: -1.6em;
+    border-radius: 0 0.3em 0.3em 0;
+  }
+  #charge {
+    position: absolute;
+    height: 6.5em;
+    width: 16.25em;
+    background-color: #16e577;
+    top: 0.6em;
+    left: 0.6em;
+  }
+  #charge-level {
+    position: absolute;
+    font-size: 3em;
+    font-weight: 500;
+  }
+  #charging-time {
+    text-align: center;
+    font-size: 1.7em;
+    margin-top: 1.4em;
+  }
+  .active {
+    animation: charge-animation 3s infinite linear;
+  }
+  @keyframes charge-animation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 16.25em;
+    }
+  }
